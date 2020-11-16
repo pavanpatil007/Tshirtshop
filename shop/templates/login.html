@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{%block content%}
+<div class="col-lg-4 mx-auto border rounded p-3 mt-4">
+
+    <form action="/login/" method="POST">
+        {% csrf_token %}
+        
+        <div class="text-center">
+            <h2 class="display-4">Login Here</h2>
+        
+            <img height="90" src="http://localhost:8000/image/download/upload/images/sports_tee.jpg">
+            <hr>
+        
+        </div>
+        {{form|crispy}}
+    
+        <div class="form-group">
+          <label for=""></label>
+          <input type="submit" name=""  value= "Log In" id="" class="btn btn-info" placeholder="" aria-describedby="helpId">
+          
+        </div>
+
+    </form>
+   
+
+</div>
+
+{%endblock%}
